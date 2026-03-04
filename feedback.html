@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Student Feedback</title>
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+.feedback-section{
+display:flex;
+justify-content:center;
+align-items:center;
+padding:80px 20px;
+background:#fff4f1;
+}
+
+.feedback-card{
+width:600px;
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 15px 30px rgba(0,0,0,0.1);
+}
+
+.feedback-card h2{
+text-align:center;
+margin-bottom:25px;
+color:#ff6f61;
+}
+
+.form-group{
+margin-bottom:15px;
+}
+
+.form-group label{
+display:block;
+margin-bottom:5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+width:100%;
+padding:10px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+.form-buttons{
+text-align:center;
+margin-top:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<div class="container nav-container">
+
+<h2 class="logo">StudentMS</h2>
+
+<ul>
+<li><a href="dashboard.php">Dashboard</a></li>
+<li><a href="logout.php">Logout</a></li>
+</ul>
+
+</div>
+</nav>
+
+<main>
+
+<section class="feedback-section">
+
+<div class="feedback-card">
+
+<h2>Student Feedback</h2>
+
+<form action="php/save_feedback.php" method="POST">
+
+<div class="form-group">
+<label>Student Name</label>
+<input type="text" name="student_name" required>
+</div>
+
+<div class="form-group">
+<label>Rating</label>
+
+<select name="rating">
+
+<option value="Excellent">Excellent</option>
+<option value="Good">Good</option>
+<option value="Average">Average</option>
+<option value="Poor">Poor</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+<label>Feedback Message</label>
+<textarea name="message"></textarea>
+</div>
+
+<div class="form-group">
+<label>Date</label>
+<input type="date" name="date">
+</div>
+
+<div class="form-buttons">
+<button class="btn">Submit</button>
+<button type="reset" class="btn">Reset</button>
+</div>
+
+</form>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+<p>© 2026 Student Activity Management System | Developed by Vino</p>
+</footer>
+
+</body>
+</html>
